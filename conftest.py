@@ -45,14 +45,14 @@ def pytest_runtest_makereport(item, call):
 
             page.screenshot(path=str(file_name))
 
-                extras_list.append(extras.image(str(file_name)))
+            extras_list.append(extras.image(str(file_name)))
 
             if report.when == "call":
-            item.call_report = report
+                item.call_report = report
 
     if report.when == "teardown":
         video_path = getattr(item, "video_path", None)
-            if video_path and hasattr(item, "call_report"):
-                item.call_report.extras.append(extras.video(video_path))
+        if video_path and hasattr(item, "call_report"):
+            item.call_report.extras.append(extras.video(video_path))
 
-            report.extras = extras_list
+    report.extras = extras_list
