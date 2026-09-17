@@ -56,8 +56,7 @@ class verticals:
         self.link9 = page.locator('(//a[@href="https://www.tranktechnologies.com/real-estate-mobile-app-development-company"])[1]')
 
         # custom_app list
-        self.custom_list = [self.link1,self.link2,self.link3,self.link4,self.link5,self.link6,self.link7,
-                            self.link9]
+        self.custom_list = [self.link1,self.link2,self.link3,self.link4,self.link5,self.link6,self.link7,self.link8,self.link9]
     def click_verify_trading(self):
         for i in self.trading_list:
             self.vertical.hover()
